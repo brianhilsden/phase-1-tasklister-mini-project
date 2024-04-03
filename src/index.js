@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const task = document.createElement("li");
-    task.textContent = new_task.value;
+    task.textContent = `${new_task.value}  `;
     tasksList.appendChild(task);
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    deleteButton.className = "delete";
     task.append(deleteButton);
     deleteButton.addEventListener("click", () => {
       task.remove();
